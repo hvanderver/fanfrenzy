@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-danger">
+      <a class="navbar-brand" href="index.html">Fan Frenzy</a>
+      <i class="fas fa-stopwatch-20"></i>
+      <button
+        class="btn btn-link btn-sm order-1 order-lg-0"
+        id="sidebarToggle"
+        href="#"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Navbar Search-->
+      <form
+        class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+      >
+        <div class="input-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Search for..."
+            aria-label="Search"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- Navbar-->
+      <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="userDropdown"
+            href="#"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ><i class="fas fa-user fa-fw"></i
+          ></a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="userDropdown"
+          >
+            <a class="dropdown-item" href="profile.html">Profile</a>
+            <a class="dropdown-item" href="401.html">Activity Log</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="login.html">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_nav">
+        <nav
+          class="sb-sidenav accordion sb-sidenav-light"
+          id="sidenavAccordion"
+        >
+          <div class="sb-sidenav-menu">
+            <div class="nav">
+              <div class="sb-sidenav-menu-heading">
+                Welcome to Fan Frenzy: it's Everybody's Game!
+              </div>
+              <a class="nav-link" href="index.html">
+                <div class="sb-nav-link-icon">
+                  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M13 23l-9.983-.014v-9.979l8.974-7.995c1.124.999 2.25 1.998 3.378 2.998l2.255 1.999c1.127.999 2.252 1.992 3.376 2.991v10l-5.993-.014-.007-4.986h-2v5zm6-2l.019-7.121-7.028-6.193-6.991 6.218v7.096h6v-5h6v5h2zm-10-5v3h-2v-3h2zm3-15l12 10.654-1.328 1.494-10.672-9.488-10.672 9.488-1.328-1.494 12-10.654z"/></svg>
+<!--                   <i class="fas fa-tachometer-alt"></i> -->
+                </div>
+                Dashboard
+<!--               </a>
+              <div class="sb-sidenav-menu-heading">Interface</div>
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapseLayouts"
+                aria-expanded="false"
+                aria-controls="collapseLayouts"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-columns"></i>
+                </div>
+                Layouts
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayouts"
+                aria-labelledby="headingOne"
+                data-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="layout-static.html"
+                    >Static Navigation</a
+                  >
+                  <a class="nav-link" href="layout-sidenav-light.html"
+                    >Light Sidenav</a
+                  >
+                </nav>
+              </div> -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapsePages"
+                aria-expanded="false"
+                aria-controls="collapsePages"
+              >
+                <div class="sb-nav-link-icon">
+                  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.621 9.012c.247.959.379 1.964.379 3 0 6.623-5.377 11.988-12 11.988s-12-5.365-12-11.988c0-6.623 5.377-12 12-12 2.581 0 4.969.822 6.927 2.211l1.718-2.223 1.935 6.012h-6.58l1.703-2.204c-1.62-1.128-3.582-1.796-5.703-1.796-5.52 0-10 4.481-10 10 0 5.52 4.48 10 10 10 5.519 0 10-4.48 10-10 0-1.045-.161-2.053-.458-3h2.079zm-7.621 7.988h-8v-6h1v-2c0-1.656 1.344-3 3-3s3 1.344 3 3v2h1v6zm-5-8v2h2v-2c0-.552-.448-1-1-1s-1 .448-1 1z"/></svg>
+<!--                   <i class="fas fa-book-open"></i> -->
+                </div>
+                Authentication
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapsePages"
+                aria-labelledby="headingTwo"
+                data-parent="#sidenavAccordion"
+              >
+                <nav
+                  class="sb-sidenav-menu-nested nav accordion"
+                  id="sidenavAccordionPages"
+                >
+                  <a class="nav-link" href="login.html">Login</a>
+                      <a class="nav-link" href="register.html">Register</a>
+                      <a class="nav-link" href="password.html"
+                        >Forgot Password</a
+                      >
+<!--                   <a
+                    class="nav-link collapsed"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#pagesCollapseAuth"
+                    aria-expanded="false"
+                    aria-controls="pagesCollapseAuth"
+                  >
+                    Authentication
+                    <div class="sb-sidenav-collapse-arrow">
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                  </a>
+                  <div
+                    class="collapse"
+                    id="pagesCollapseAuth"
+                    aria-labelledby="headingOne"
+                    data-parent="#sidenavAccordionPages"
+                  >
+                    <nav class="sb-sidenav-menu-nested nav">
+                      <a class="nav-link" href="login.html">Login</a>
+                      <a class="nav-link" href="register.html">Register</a>
+                      <a class="nav-link" href="password.html"
+                        >Forgot Password</a
+                      >
+                    </nav>
+                  </div>
+                  <a
+                    class="nav-link collapsed"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#pagesCollapseError"
+                    aria-expanded="false"
+                    aria-controls="pagesCollapseError"
+                  >
+                    Error
+                    <div class="sb-sidenav-collapse-arrow">
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                  </a>
+                  <div
+                    class="collapse"
+                    id="pagesCollapseError"
+                    aria-labelledby="headingOne"
+                    data-parent="#sidenavAccordionPages"
+                  >
+                    <nav class="sb-sidenav-menu-nested nav">
+                      <a class="nav-link" href="401.html">401 Page</a>
+                      <a class="nav-link" href="404.html">404 Page</a>
+                      <a class="nav-link" href="500.html">500 Page</a>
+                    </nav>
+                  </div> -->
+                </nav>
+              </div>
+              <div class="sb-sidenav-menu-heading">Addons</div>
+              <a class="nav-link" href="news.html">
+                <div class="sb-nav-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M7 16h13v1h-13v-1zm13-3h-13v1h13v-1zm0-6h-5v1h5v-1zm0 3h-5v1h5v-1zm-17-8v17.199c0 .771-1 .771-1 0v-15.199h-2v15.98c0 1.115.905 2.02 2.02 2.02h19.958c1.117 0 2.022-.904 2.022-2.02v-17.98h-21zm19 17h-17v-15h17v15zm-9-12h-6v4h6v-4z"/></svg>
+                </div>
+                Lifestyle - News & Blogs
+              </a>
+<!--               <a class="nav-link" href="tables.html">
+                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                Tables
+              </a> -->
+              </a>
+            </div>
+          </div>
+          <div class="sb-sidenav-footer">
+            <div class="small">Welcome to the Team</div>
+            Look around a bit!
+          </div>
+        </nav>
+      </div>
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid">
+            <h1 class="mt-4">Dashboard</h1>
+            <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+            <div class="row">
+              <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4" >
+                  <div class="card-body">Football Chat</div>
+                  <div
+                    class="card-footer d-flex align-items-center justify-content-between"
+                  >
+                    <a class="small text-white stretched-link" href="FBchat.html"
+                      >Go To Chat</a
+                    >
+                    <div class="small text-white">
+                      <i class="fas fa-angle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4" >
+                  <div class="card-body">Soccer Chat</div>
+                  <div
+                    class="card-footer d-flex align-items-center justify-content-between"
+                  >
+                    <a class="small text-white stretched-link" href="SOCchat.html"
+                      >Go To Chat</a
+                    >
+                    <div class="small text-white">
+                      <i class="fas fa-angle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card bg-success text-white mb-4" >
+                  <div class="card-body">Baseball Chat</div>
+                  <div
+                    class="card-footer d-flex align-items-center justify-content-between"
+                  >
+                    <a class="small text-white stretched-link" href="BBchat.html"
+                      >Go To Chat</a
+                    >
+                    <div class="small text-white">
+                      <i class="fas fa-angle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card bg-danger text-white mb-4" >
+                  <div class="card-body">General Chat</div>
+                  <div
+                    class="card-footer d-flex align-items-center justify-content-between"
+                  >
+                    <a class="small text-white stretched-link" href="genchat.html"
+                      >Go To Chat</a
+                    >
+                    <div class="small text-white">
+                      <i class="fas fa-angle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl">
+                <div class="card mb-4" style="width: 22rem;">
+                  <div id="vertical-scroll">
+                    <a class="twitter-timeline" href="https://twitter.com/asha_redhead/likes?ref_src=twsrc%5Etfw"  
+                    data-width="100%" data-height="390">Tweets Liked by @asha_redhead</a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl">
+                <div class="card mb-4" style="width: 35rem;">
+                  <div class="card-header" style="height: 5rem;">
+                    <i class="fas fa-chart-area mr-1"></i>
+                    Live Stream, Play, and Listen
+                  </div>
+                  <iframe width="650" height="315" src="https://www.youtube.com/embed/mvCf1rB2RvY" frameborder="0"
+                  allow="accelerometer; muteclipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe> 
+                </div>
+              </div>
+              <div class="col-xl">
+                <div class="card mb-4" style="width: 15rem;">
+                  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdxTsNp0Bzwq" width="268" height=
+                  "79" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                 </div>
+               </div>
+             </div>
+            <div class="card mb-4" style="width: 65rem;">
+              <div class="card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewbox="0 0 26 24"><path d="M17.5 12.5c0 .828-.56 1.5-1.25 1.5s-1.25-.672-1.25-1.5.56-1.5 1.25-1.5 1.25.672 1.25 1.5zm-7.75-1.5c-.69 0-1.25.672-1.25 1.5s.56 1.5 1.25 1.5 1.25-.672 1.25-1.5-.56-1.5-1.25-1.5zm3.25 8.354c2.235 0 3-2.354 3-2.354h-6s.847 2.354 3 2.354zm13-6.75c0 2.865-.791 5.778-1.933 8.243-.542 1.169-1.163 2.238-1.817 3.153l-3.796-1.917c-1.556 1.187-3.37 1.917-5.454 1.917-1.993 0-3.825-.749-5.408-1.941l-3.842 1.941c-.654-.915-1.275-1.984-1.817-3.153-1.142-2.465-1.933-5.378-1.933-8.243 0-7.59 5.281-12.604 13-12.604s13 5.014 13 12.604zm-5.669 4.285c.123-.202.313-.354.536-.43 2.106-.713 2.57-3.529 1.802-4.746-6.576-.39-10.89-3.363-12.669-6.322-2.257 5.063-5.078 6.628-6.863 6.795-.482 1.714.322 3.706 1.996 4.273.224.076.413.228.536.43 1.708 2.83 4.015 5.111 7.331 5.111 3.318 0 5.624-2.284 7.331-5.111z"/></svg>
+                The Locker Room: Fans Near You
+              </div>
+              <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-IMn72l9KxFzh4mmhpITuFC1ozT-88Bf" width="100%" height="700"></iframe>
+<!--         </main> -->
+        <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid">
+            <div
+              class="d-flex align-items-center justify-content-between small"
+            >
+              <div class="text-muted">Copyright &copy; Fan Frenzy 2020</div>
+              <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script
+      src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+       src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/demo/datatables-demo.js"></script>
+        </main>
+<!--   </body> -->
+</html>
