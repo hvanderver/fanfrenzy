@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Lifestyle - News & Blogs</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-danger">
+      <a class="navbar-brand" href="index.html">Fan Frenzy</a>
+      <button
+        class="btn btn-link btn-sm order-1 order-lg-0"
+        id="sidebarToggle"
+        href="#"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Navbar Search-->
+      <form
+        class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+      >
+        <div class="input-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Search for..."
+            aria-label="Search"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- Navbar-->
+      <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="userDropdown"
+            href="#"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ><i class="fas fa-user fa-fw"></i
+          ></a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="userDropdown"
+          >
+            <a class="dropdown-item" href="profile.html">Profile</a>
+            <a class="dropdown-item" href="news.html">Activity Log</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="login.html">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_nav">
+        <nav
+          class="sb-sidenav accordion sb-sidenav-light"
+          id="sidenavAccordion"
+        >
+          <div class="sb-sidenav-menu">
+            <div class="nav">
+              <div class="sb-sidenav-menu-heading">
+                Welcome to Fan Frenzy: it's Everybody's Game!
+              </div>
+              <a class="nav-link" href="index.html">
+                <div class="sb-nav-link-icon">
+                  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M13 23l-9.983-.014v-9.979l8.974-7.995c1.124.999 2.25 1.998 3.378 2.998l2.255 1.999c1.127.999 2.252 1.992 3.376 2.991v10l-5.993-.014-.007-4.986h-2v5zm6-2l.019-7.121-7.028-6.193-6.991 6.218v7.096h6v-5h6v5h2zm-10-5v3h-2v-3h2zm3-15l12 10.654-1.328 1.494-10.672-9.488-10.672 9.488-1.328-1.494 12-10.654z"/></svg>
+<!--                   <i class="fas fa-tachometer-alt"></i> -->
+                </div>
+                Dashboard
+              </a>
+              <!--               <div class="sb-sidenav-menu-heading">Interface</div> -->
+              <!--               <a
+                class="nav-link collapsed"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapseLayouts"
+                aria-expanded="false"
+                aria-controls="collapseLayouts"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-columns"></i>
+                </div>
+                Layouts
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayouts"
+                aria-labelledby="headingOne"
+                data-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="layout-static.html"
+                    >Static Navigation</a
+                  >
+                  <a class="nav-link" href="layout-sidenav-light.html"
+                    >Light Sidenav</a
+                  >
+                </nav>
+              </div> -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapsePages"
+                aria-expanded="false"
+                aria-controls="collapsePages"
+              >
+                <div class="sb-nav-link-icon">
+                  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.621 9.012c.247.959.379 1.964.379 3 0 6.623-5.377 11.988-12 11.988s-12-5.365-12-11.988c0-6.623 5.377-12 12-12 2.581 0 4.969.822 6.927 2.211l1.718-2.223 1.935 6.012h-6.58l1.703-2.204c-1.62-1.128-3.582-1.796-5.703-1.796-5.52 0-10 4.481-10 10 0 5.52 4.48 10 10 10 5.519 0 10-4.48 10-10 0-1.045-.161-2.053-.458-3h2.079zm-7.621 7.988h-8v-6h1v-2c0-1.656 1.344-3 3-3s3 1.344 3 3v2h1v6zm-5-8v2h2v-2c0-.552-.448-1-1-1s-1 .448-1 1z"/></svg>
+<!--                   <i class="fas fa-book-open"></i> -->
+                </div>
+                Authentication
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapsePages"
+                aria-labelledby="headingTwo"
+                data-parent="#sidenavAccordion"
+              >
+                <nav
+                  class="sb-sidenav-menu-nested nav accordion"
+                  id="sidenavAccordionPages"
+                >
+                  <a class="nav-link" href="login.html">Login</a>
+                      <a class="nav-link" href="register.html">Register</a>
+                      <a class="nav-link" href="password.html"
+                        >Forgot Password</a
+                      >
+<!--                   <a
+                    class="nav-link collapsed"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#pagesCollapseAuth"
+                    aria-expanded="false"
+                    aria-controls="pagesCollapseAuth"
+                  >
+                    Authentication
+                    <div class="sb-sidenav-collapse-arrow">
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                  </a>
+                  <div
+                    class="collapse"
+                    id="pagesCollapseAuth"
+                    aria-labelledby="headingOne"
+                    data-parent="#sidenavAccordionPages"
+                  >
+                    <nav class="sb-sidenav-menu-nested nav">
+                      <a class="nav-link" href="login.html">Login</a>
+                      <a class="nav-link" href="register.html">Register</a>
+                      <a class="nav-link" href="password.html"
+                        >Forgot Password</a
+                      >
+                    </nav>
+                  </div>
+                  <a
+                    class="nav-link collapsed"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#pagesCollapseError"
+                    aria-expanded="false"
+                    aria-controls="pagesCollapseError"
+                  >
+                    Error
+                    <div class="sb-sidenav-collapse-arrow">
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                  </a>
+                  <div
+                    class="collapse"
+                    id="pagesCollapseError"
+                    aria-labelledby="headingOne"
+                    data-parent="#sidenavAccordionPages"
+                  >
+                    <nav class="sb-sidenav-menu-nested nav">
+                      <a class="nav-link" href="401.html">401 Page</a>
+                      <a class="nav-link" href="404.html">404 Page</a>
+                      <a class="nav-link" href="500.html">500 Page</a>
+                    </nav>
+                  </div> -->
+                </nav>
+              </div>
+              <div class="sb-sidenav-menu-heading">Addons</div>
+              <a class="nav-link" href="news.html">
+                <div class="sb-nav-link-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewbox="0 0 24 24"
+                    color="white"
+                  >
+                    <path
+                      d="M7 16h13v1h-13v-1zm13-3h-13v1h13v-1zm0-6h-5v1h5v-1zm0 3h-5v1h5v-1zm-17-8v17.199c0 .771-1 .771-1 0v-15.199h-2v15.98c0 1.115.905 2.02 2.02 2.02h19.958c1.117 0 2.022-.904 2.022-2.02v-17.98h-21zm19 17h-17v-15h17v15zm-9-12h-6v4h6v-4z"
+                    />
+                  </svg>
+                </div>
+                Lifestyle - News & Blogs
+              </a>
+              <!--                             <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a> -->
+            </div>
+          </div>
+          <div class="sb-sidenav-footer">
+            <div class="small">Welcome to the Team:</div>
+            Look around a bit!
+          </div>
+        </nav>
+      </div>
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid">
+            <h1 class="mt-4">Lifestyle - News & Blogs</h1>
+            <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item">
+                <a href="index.html">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item active">Lifestyle - News & Blogs</li>
+            </ol>
+            <div class="card mb-4">
+              <div class="card-body">
+                Here you will find in-depth season analysis, general news, and
+                highlighted articles written by women and non-binary sports
+                journalists. What do you think about the ongoing season? Add to
+                the discussion in the chat boxes!
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-header">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M15 12h-10v1h10v-1zm-4 2h-6v1h6v-1zm4-6h-10v1h10v-1zm0 2h-10v1h10v-1zm0-6h-10v1h10v-1zm0 2h-10v1h10v-1zm7.44 10.277c.183-2.314-.433-2.54-3.288-5.322.171 1.223.528 3.397.911 5.001.089.382-.416.621-.586.215-.204-.495-.535-2.602-.82-4.72-.154-1.134-1.661-.995-1.657.177.005 1.822.003 3.341 0 6.041-.003 2.303 1.046 2.348 1.819 4.931.132.444.246.927.339 1.399l3.842-1.339c-1.339-2.621-.693-4.689-.56-6.383zm-6.428 1.723h-13.012v-16h14v7.894c.646-.342 1.348-.274 1.877.101l.123-.018v-8.477c0-.828-.672-1.5-1.5-1.5h-15c-.828 0-1.5.671-1.5 1.5v17c0 .829.672 1.5 1.5 1.5h13.974c-.245-.515-.425-1.124-.462-2z"
+                  />
+                </svg>
+                News
+              </div>
+              <!--<div class="card-body"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>-->
+              <div class="card-body11">
+                <!-- start sw-rss-feed code -->
+                <script type="text/javascript">
+                  rssfeed_url = new Array();
+                  rssfeed_url[0] = "https://sports.yahoo.com";
+                  rssfeed_frame_width = "1080";
+                  rssfeed_frame_height = "400";
+                  rssfeed_scroll = "on";
+                  rssfeed_scroll_step = "6";
+                  rssfeed_scroll_bar = "off";
+                  rssfeed_target = "_blank";
+                  rssfeed_font_size = "12";
+                  rssfeed_font_face = "";
+                  rssfeed_border = "on";
+                  rssfeed_css_url = "";
+                  rssfeed_title = "on";
+                  rssfeed_title_name = "";
+                  rssfeed_title_bgcolor = "#3366ff";
+                  rssfeed_title_color = "#fff";
+                  rssfeed_title_bgimage = "";
+                  rssfeed_footer = "off";
+                  rssfeed_footer_name = "rss feed";
+                  rssfeed_footer_bgcolor = "#fff";
+                  rssfeed_footer_color = "#333";
+                  rssfeed_footer_bgimage = "";
+                  rssfeed_item_title_length = "50";
+                  rssfeed_item_title_color = "#666";
+                  rssfeed_item_bgcolor = "#fff";
+                  rssfeed_item_bgimage = "";
+                  rssfeed_item_border_bottom = "on";
+                  rssfeed_item_source_icon = "off";
+                  rssfeed_item_date = "off";
+                  rssfeed_item_description = "on";
+                  rssfeed_item_description_length = "120";
+                  rssfeed_item_description_color = "#666";
+                  rssfeed_item_description_link_color = "#333";
+                  rssfeed_item_description_tag = "off";
+                  rssfeed_no_items = "0";
+                  rssfeed_cache = "1797b38b6c40e86b5f2f116cf60f0293";
+                  //-->
+                </script>
+                <script
+                  type="text/javascript"
+                  src="https://feed.surfing-waves.com/js/rss-feed.js"
+                ></script>
+                <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+                <div
+                  style="color:#ccc;font-size:10px; text-align:right; width:1100px;"
+                >
+                  powered by
+                  <a
+                    href="https://surfing-waves.com"
+                    rel="noopener"
+                    target="_blank"
+                    style="color:#ccc;"
+                    >Surfing Waves</a
+                  >
+                </div>
+                <!-- end sw-rss-feed code -->
+              </div>
+              <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.407 10.516h-.975c-.5 0-.592-.382-.592-.854.001-2.023-1.636-3.662-3.655-3.662h-2.53c-2.018 0-3.655 1.639-3.655 3.662v4.676c0 2.023 1.637 3.662 3.654 3.662h4.692c2.017 0 3.654-1.639 3.654-3.662v-3.229c0-.328-.267-.593-.593-.593zm-7.714-1.516h2.113c.384 0 .694.335.694.75s-.31.75-.693.75h-2.114c-.382 0-.693-.335-.693-.75s.311-.75.693-.75zm4.566 6h-4.519c-.409 0-.74-.335-.74-.75 0-.414.331-.75.74-.75h4.519c.41 0 .741.335.741.75s-.331.75-.741.75z"
+                      />
+                    </svg>
+                    Blogs
+                  </div>
+                  <div class="card-body">
+                    <!-- start sw-rss-feed code -->
+                    <script type="text/javascript">
+                      rssfeed_url = new Array();
+                      rssfeed_url[0] = "https://equalizersoccer.com";
+                      rssfeed_url[1] = "http://ittakesateam.blogspot.com/";
+                      rssfeed_frame_width = "505";
+                      rssfeed_frame_height = "260";
+                      rssfeed_scroll = "on";
+                      rssfeed_scroll_step = "6";
+                      rssfeed_scroll_bar = "off";
+                      rssfeed_target = "_blank";
+                      rssfeed_font_size = "12";
+                      rssfeed_font_face = "";
+                      rssfeed_border = "on";
+                      rssfeed_css_url = "";
+                      rssfeed_title = "on";
+                      rssfeed_title_name = "";
+                      rssfeed_title_bgcolor = "#3366ff";
+                      rssfeed_title_color = "#fff";
+                      rssfeed_title_bgimage = "";
+                      rssfeed_footer = "off";
+                      rssfeed_footer_name = "rss feed";
+                      rssfeed_footer_bgcolor = "#fff";
+                      rssfeed_footer_color = "#333";
+                      rssfeed_footer_bgimage = "";
+                      rssfeed_item_title_length = "50";
+                      rssfeed_item_title_color = "#666";
+                      rssfeed_item_bgcolor = "#fff";
+                      rssfeed_item_bgimage = "";
+                      rssfeed_item_border_bottom = "on";
+                      rssfeed_item_source_icon = "off";
+                      rssfeed_item_date = "off";
+                      rssfeed_item_description = "on";
+                      rssfeed_item_description_length = "120";
+                      rssfeed_item_description_color = "#666";
+                      rssfeed_item_description_link_color = "#333";
+                      rssfeed_item_description_tag = "off";
+                      rssfeed_no_items = "0";
+                      rssfeed_cache = "585ffc024a8a660197e20bed8f9dba37";
+                      //-->
+                    </script>
+                    <script
+                      type="text/javascript"
+                      src="https://feed.surfing-waves.com/js/rss-feed.js"
+                    ></script>
+                    <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+                    <div
+                      style="color:#ccc;font-size:10px; text-align:right; width:230px;"
+                    >
+                      powered by
+                      <a
+                        href="https://surfing-waves.com"
+                        rel="noopener"
+                        target="_blank"
+                        style="color:#ccc;"
+                        >Surfing Waves</a
+                      >
+                    </div>
+                    <!-- end sw-rss-feed code -->
+                  </div>
+                  <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.326 18.266l-4.326-2.314-4.326 2.313.863-4.829-3.537-3.399 4.86-.671 2.14-4.415 2.14 4.415 4.86.671-3.537 3.4.863 4.829z"
+                      />
+                    </svg>
+                    Feature of the week
+                  </div>
+                  <div class="card-body">
+                    <iframe
+                      height="200px"
+                      width="100%"
+                      frameborder="no"
+                      scrolling="no"
+                      seamless
+                      src="https://player.simplecast.com/733dd64d-8266-4a47-9bfe-cce8100ddec6?dark=false"
+                    ></iframe>
+                  </div>
+                  <div class="card-footer small text-muted">
+                    From platonic friendships to romantic relationships, this
+                    week, Lisa and Chiney discuss their journeys through
+                    different aspects of relationships. Also, FS1 analyst and
+                    former NFL linebacker, Emmanuel Acho stops by to discuss the
+                    male perspective on relationships.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid">
+            <div
+              class="d-flex align-items-center justify-content-between small"
+            >
+              <div class="text-muted">Copyright &copy; Fan Frenzy 2020</div>
+              <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="assets/demo/chart-pie-demo.js"></script>
+  </body>
+</html>
